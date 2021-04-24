@@ -1,0 +1,677 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+li {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.img {
+  width: 100%;
+  object-fit: cover;
+}
+
+body {
+  width: 100%;
+  color: #000;
+  background: #fff;
+  line-height: 1;
+}
+
+a:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+h2 {
+font-size: 2.4rem;
+}
+
+h3 {
+font-size: 2rem;
+}
+
+h4 {
+font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+p,
+a,
+dt,
+dd {
+font-size: 1.6rem;
+}
+
+/* ここまで共通事項 */
+
+// ヘッダー
+
+.header__main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  background: url(images/bg_page.png);
+  z-index: 100;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header__item {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  z-index: 100;
+}
+
+.header__item a {
+  margin-right: 50px;
+  color: #000;
+}
+
+.header__logo--img {
+  width: 100%;
+  z-index: 100;
+  position: relative;
+}
+
+.header__main--sales {
+  display: flex;
+}
+
+.header__main--pic {
+  width: 100%;
+  margin: 0 auto;
+  line-height: 0;
+}
+
+.header__main--pic img {
+  object-fit: cover;
+  height: 620px;
+}
+
+// .header__main--sns {
+//   width: 5%;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
+.header__main--sns a {
+  width: 30px;
+  margin-bottom: 35px;
+  z-index: 100;
+  display: inline-block;
+  position: absolute;
+}
+
+.icon-color {
+  color: #5F3B13;
+}
+
+// ここからヘッダートップ
+
+.container__top {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin: 100px auto;
+  width: 70%;
+}
+
+.container__lbox {
+  width: 50%;
+}
+
+.container__lbox--txt {
+  margin: 0 10%;
+  font-size: 3rem;
+}
+
+.container__rbox {
+  display: flex;
+  width: 50%;
+}
+
+.container__rbox--date {
+  margin-bottom: 10px;
+}
+
+.container__rbox--pic {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 30px;
+}
+
+.container__menu--ttl {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.container__menu--txt {
+  margin: 0 0 15px;
+}
+
+.container__menu--list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.container__menu--list li {
+  width: 29%;
+  height: 330px;
+  margin: 2%;
+  text-align: right;
+  position: relative;
+}
+
+.container__menu--item {
+  object-fit: cover;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.container__menu--logo {
+  opacity: 0.6;
+  transform: scale(-1, 1);
+}
+
+// ここからブログ
+
+.container__blog {
+  padding: 30px 0;
+  margin: 100px 0;
+  background: #a4524b;
+  color: #fff;
+  width: 100%;
+}
+
+.container__blog--box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.container__blog--lbox {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+}
+
+.container__blog--rbox {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container__blog--img {
+  width: 200px;
+  height: 170px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.container__blog--mttl {
+  margin: 30px 0;
+}
+
+.container__blog--link {
+  border: solid 1px #fff;
+  padding: 20px 30px;
+  width: fit-content;
+}
+
+.container__blog--date {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin: 10px 0;
+}
+
+.container__blog--menu {
+  margin: 10px 0;
+}
+
+.container__blog--announce {
+  background: #fff;
+  color: #a4524b;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 5px 8px;
+}
+
+// ここから衛生
+
+.container__clean {
+  box-sizing: border-box;
+}
+
+.container__clean--ttl {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.container__clean--list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  border: solid 3px #fff;
+  border-radius: 5px;
+  padding: 5% 2%;
+  margin: 2%;
+}
+
+.container__clean li {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: 2%;
+}
+
+.container__clean--img {
+  width: 100%;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+
+// ここからマップ
+
+.container__map {
+  margin: 100px auto;
+}
+
+.container__map--ttl {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.container__map--guide {
+  display: flex;
+  align-items: center;
+}
+
+.container__map--lbox,
+.container__map--rbox {
+  width: 50%;
+  margin: 0 2%;
+}
+
+.container__map--rbox dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container__map--rbox dt {
+  width: 20%;
+  margin-bottom: 20px;
+}
+
+.container__map--rbox dd  {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+// ここからフッター
+
+.footer {
+  background: #a4524b;
+  height: 100px;
+  text-align: center;
+  color: #fff;
+}
+
+.footer__content {
+  margin: 30px 0;
+  padding: 30px 0;
+}
+
+.footer__ttl {
+  margin-bottom: 10px;
+}
+
+
+
+
+// フェードイン
+
+.fadein {
+	opacity : 0.1;
+	transform : translate(0, 50px);
+	transition : all 700ms;
+	}
+
+/* 画面内に入った状態 */
+.fadein.scrollin {
+	opacity : 1;
+	transform : translate(0, 0);
+	}
+
+
+  // 【about】=============================================
+
+.container__about {
+  text-align: center;
+  font-family: "Noto Serif JP", serif;
+}
+
+.container__about--meatkitchen {
+  margin-bottom: 50px;
+}
+
+.container__about--slider li {
+  height: 250px;
+}
+
+.container__about--slider-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container__about--goodlist {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 100px auto;
+}
+
+// 偶数ならodd
+.container__about--goodlist li:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.container__about--goodlist li {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+}
+
+.container__about--goodttl {
+  font-size: 4rem;
+  font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+  font-weight: normal;
+  margin: 10% 20% 5% 30%;
+}
+
+.container__about--goodtxt {
+  margin: 0 20% 5% 30%;
+  letter-spacing: 0.2;
+  line-height: 2;
+}
+
+.container__about--good-img {
+  height: 300px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.container__about--good-box {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.container__about--good-pic {
+  width: 50%;
+}
+
+// 【コンタクトフォーム】＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+
+// 【こだわり】＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+.commitment__main {
+  text-align: center;
+}
+
+.commitment__eat {
+  margin-top: -250px;
+}
+
+.commitment__eat--vd {
+  position: relative;
+}
+
+.commitment__eat--video {
+  width: 100%;
+  height: 720px;
+}
+
+.commitment__eat--ttl {
+  color: #fff;
+  position: absolute;
+  top: 40%;
+  right: 20px;
+  text-shadow: 2px 2px 3px #000;
+}
+
+.commitment__eat--meatkitchen {
+  margin: 40px 0;
+}
+
+.commitment__eat--meatkitchen-txt {
+  margin: 10px 0;
+}
+
+.commitment__eat--img {
+  width: 170px;
+  height: 170px;
+  margin: 0 auto;
+  object-fit: fill;
+  animation: fuwafuwa 2s infinite;
+}
+
+@keyframes fuwafuwa {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.commitment__eat--list {
+  display: flex;
+  align-items: baseline;
+  margin: 100px 0;
+  border: solid 3px #a4524b;
+  border-radius: 10px;
+}
+
+
+.commitment__eat--list li {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 300px;
+  margin: 50px 3%;
+}
+
+.smooth {
+  clip-path: inset(0 100% 0 0);
+  display: inline-block;
+  font-size: 36px;
+  font-weight: bold;
+  transition: 1.4s cubic-bezier(0.37, 0, 0.63, 1);
+  transition-property: clip-path;
+  line-height: 1;
+  height: 40px;
+  margin-top: 15px;
+}
+.smooth.is-animated {
+  clip-path: inset(0);
+}
+ 
+
+// メニュー
+.menu {
+  background: url("/images/back2.jpg") repeat center;
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;
+  margin-top: -300px;
+  padding-bottom: 150px;
+}
+
+.menu__list {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  margin: 150px auto;
+}
+
+.menu__list--items {
+  padding: 3%;
+  margin: 50px auto;
+  width: 70%;
+  border: solid 1px #000;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.menu__list--rimg {
+  width: 30%;
+  position: absolute;
+  top: -50px;
+  right: 0;
+}
+
+.menu__list--limg{
+  width: 30%;
+  position: absolute;
+  top: -60px;
+  left: 10px;
+}
+
+.menu__list--ttl {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.menu__list--txt {
+}
+
+.menu__list--item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu__list--item dt {
+  width: 60%;
+  margin-bottom: 10px;
+}
+
+.menu__list--item dd {
+  width: 40%;
+  margin-bottom: 10px;
+}
+
+// コンタクトフォーム＝＝＝＝＝＝＝＝＝＝＝＝
+
