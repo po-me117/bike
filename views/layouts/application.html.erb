@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meat kitchen</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+     <%# slick %>
+
+    <%# CSS %>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <%# JS%>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      
+  </head>
+
+  <body>
+    <header>
+        <div class="wrap">
+          <div class="header__main">
+            <div class="header__logo"> 
+              <a href="/"><img src="images/meatkitchen.png" alt="ロゴ" class="header__logo--img"></a>
+            </div>
+            <div class="header__item">
+              <a href="/about">ABOUT</a>
+              <a href="/commitment">COMMITMENT</a>
+              <a href="/menu">MENU</a>
+              <a href="/contact">CONTACT</a>
+            </div>
+          </div>
+        </div>
+     </header>
+    <%= yield %>
+  </body>
+</html>
